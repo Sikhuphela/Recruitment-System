@@ -3,13 +3,14 @@ import './App.css'; // Import your CSS file
 
 function App() {
   const [showLogin, setShowLogin] = useState(true);
+  const [showRegister, setShowRegister] = useState(true);
 
   const login = () => {
     setShowLogin(true);
   };
 
   const register = () => {
-    setShowLogin(false);
+   setShowRegister(false);
   };
 
   return (
@@ -28,7 +29,7 @@ function App() {
         </div>
         <div className="nav-button">
           <button className={`btn ${showLogin ? 'white-btn' : ''}`} onClick={login}>Sign In</button>
-          <button className={`btn ${!showLogin ? 'white-btn' : ''}`} onClick={register}>Sign up</button>
+          <button className={`btn ${!showRegister ? 'white-btn' : ''}`} onClick={register}>Sign up</button>
         </div>
         <div className="nav-menu-btn">
           <i className='bx bx-menu' onClick={() => document.getElementById("navMenu").classList.toggle("responsive")}></i>
